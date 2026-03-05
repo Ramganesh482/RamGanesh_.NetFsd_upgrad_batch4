@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Page</title>
+
+<!-- Viewport Meta Tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* Desktop style */
+body{
+    background-color: lightblue;
+    font-size:20px;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+/* Mobile Screen */
+@media (max-width:600px){
+
+body{
+    background-color:lightgreen;
+    font-size:14px;
+}
+
+/* Vertical navigation */
+nav{
+    flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Courses</a>
+<a href="#">Contact</a>
+</nav>
+
+<h1>Responsive Webpage</h1>
+<p>This page changes layout on mobile screen.</p>
+
+</body>
+</html>
