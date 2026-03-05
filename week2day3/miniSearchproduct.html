@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Search</title>
+
+<style>
+
+body{
+font-family:Arial;
+}
+
+li{
+margin:5px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Product Search</h2>
+
+<input type="text" id="searchBox" placeholder="Search product">
+
+<ul id="productList"></ul>
+
+<p id="noResult"></p>
+
+<script>
+
+const products = [
+"Laptop",
+"Mobile",
+"Keyboard",
+"Mouse",
+"Monitor",
+"Headphones"
+];
+
+const searchBox = document.getElementById("searchBox");
+const productList = document.getElementById("productList");
+const noResult = document.getElementById("noResult");
+
+/* display products */
+
+function displayProducts(list){
+
+productList.innerHTML = "";
+
+if(list.length === 0){
+noResult.textContent = "No Results Found";
+return;
+}
+
+noResult.textContent = "";
+
+list.forEach(product=>{
+const li = document.createElement("li");
+li.textContent = product;
+productList.appendChild(li);
+});
+
+}
+
+displayProducts(products);
+
+searchBox.addEventListener("input", function(){
+
+const value = searchBox.value.toLowerCase();
+
+const filtered = products.filter(product =>
+product.toLowerCase().includes(value)
+);
+
+displayProducts(filtered);
+
+});
+
+</script>
+
+</body>
+</html>
