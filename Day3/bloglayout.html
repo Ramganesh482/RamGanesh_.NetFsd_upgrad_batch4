@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog Layout</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+}
+
+header{
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+padding:20px;
+}
+
+.card{
+background:#f4f4f4;
+border:1px solid #ccc;
+padding:15px;
+margin:10px;
+flex:1 1 30%;
+}
+
+button{
+padding:8px;
+background:blue;
+color:white;
+border:none;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+.container{
+flex-direction:column;
+}
+
+.card{
+flex:1 1 100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>My Blog</h1>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Article 1</h3>
+<p>Short description of blog article.</p>
+<button>Read More</button>
+</div>
+
+<div class="card">
+<h3>Article 2</h3>
+<p>Short description of blog article.</p>
+<button>Read More</button>
+</div>
+
+<div class="card">
+<h3>Article 3</h3>
+<p>Short description of blog article.</p>
+<button>Read More</button>
+</div>
+
+</div>
+
+</body>
+</html>

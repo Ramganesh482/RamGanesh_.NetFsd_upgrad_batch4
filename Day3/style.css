@@ -1,0 +1,27 @@
+h1{
+color:blue;
+text-align:center;
+}
+
+p{
+font-size:18px;
+line-height:1.5;
+}
+
+.box{
+background-color:lightgray;
+border:2px solid black;
+padding:20px;
+}
+
+.spacing{
+border:2px solid red;
+margin:30px;
+padding:20px;
+}
+
+form{
+background-color:#f2f2f2;
+padding:15px;
+border:1px solid black;
+}
